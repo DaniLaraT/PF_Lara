@@ -7,55 +7,91 @@
 
 header{
     background-color: #ADC178;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
 }
 
 header img{
-    width: 400px; 
+    width: 200px; 
     height: auto;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 ul{
     list-style: none;
 }
  
-.bienvenida h2{
-        font-size: 60px;
-        text-decoration: none;
-        color: #6B774B;
-        font-weight: bold;
-    }
-
 header nav ul a{ 
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-.here{ 
-    font-size: 50px;
+header nav ul a.here{ 
+    font-size: 30px;
 
 }
 
+body.inicio section{
+    display: flex;
+    margin: 0px 10px;
+}
 
+body.inicio section article{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 10px;
+    justify-content: center;
+}
 
-.img_bienvenida{
-    width: 50%;
+body.inicio article div.container{
+    display: flex;
+    width: 90%;
+    background-color: rgba(240, 234, 210, 0.5);
+    transform: translateX(20%);
+    z-index: 1;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+body.inicio article h2{
+    font-size: 25px;
+    text-decoration: none;
+    color: #6B774B;
+    font-weight: bold;
+}
+
+.img_inicio{
+    width: 70%;
     height: auto;
     opacity: 0.7;
 
 }
 
+.img_inicio img{
+    width: 100%;
+}
+
 .bienvenida img{
     opacity: 1;
+    width: 250px;
 
 }
 
-.bienvenida{
-    background-color: rgba(240, 234, 210, 0.5);
-
-    position: relative;
-}
 
 
 .tips img {
@@ -203,15 +239,26 @@ width: 800px;
 }
 
 footer{
-    padding-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
 }
 
 footer h4{
-    font-size: 30px;
+    font-size: 10px;
     text-decoration: none;
     color: #000000;
-    font-weight:bold;
+    font-weight: bold;
 
+}
+
+footer .redes-sociales{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .redes-sociales div{
+    display: flex;
 }
 
 .img_redes{
