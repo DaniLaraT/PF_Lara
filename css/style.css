@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    font-family: lato;
+}
+
+header{
+    background-color: #ADC178;
+}
+
+header img{
+    width: 400px; 
+    height: auto;
+}
+
+ul{
+    list-style: none;
+}
+ 
+.bienvenida h2{
+        font-size: 60px;
+        text-decoration: none;
+        color: #6B774B;
+        font-weight: bold;
+    }
+
+header nav ul a{ 
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.here{ 
+    font-size: 50px;
+
+}
+
+
+
+.img_bienvenida{
+    width: 50%;
+    height: auto;
+    opacity: 0.7;
+
+}
+
+.bienvenida img{
+    opacity: 1;
+
+}
+
+.bienvenida{
+    background-color: rgba(240, 234, 210, 0.5);
+
+    position: relative;
+}
+
+
+.tips img {
+    width: 400px; 
+}
+
+.tips p{
+        font-size: 28px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight:normal;
+}
+
+.tips .one {
+    background-color: #DDE5B6;
+}
+
+.tips .two {
+    background-color: #F0EAD2;
+}
+
+.tips .thre {
+    background-color: #DDE5B6;
+}
+
+.tips .thre img {
+    width: 400px;
+    height: 300px;
+}
+
+.cursos h1{
+    font-size: 60px;
+    text-decoration: none;
+    color: #6B774B;
+    font-weight: bold;
+}
+
+.cursos img{
+    width: 400px;
+}
+
+.cursos h2{
+    font-size: 40px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.cursos h3{
+    font-size: 40px;
+    text-decoration: none;
+    color: #6C584C;
+    font-weight: bold;
+}
+
+.cursos p{
+    font-size: 28px;
+    text-decoration: none;
+    color: #000000;
+    font-weight:normal;
+}
+
+.cursos .curso1{
+    background-color: #a9846789;
+}
+
+.cursos .curso2{
+    background-color: #dde5b686;
+}
+
+.cursos .curso3{
+    background-color: #f0ead289;
+}
+
+.cursos .curso4{
+    background-color: #dde5b686;
+}
+
+.nosotros h1{
+    font-size: 40px;
+    text-decoration: none;
+    color: #000000;
+    font-weight:bold;
+}
+
+.nosotros h3{
+    font-size: 30px;
+    text-decoration: none;
+    color: #000000;
+    font-weight:normal;
+}
+
+.nosotros img{
+    width: 900px;
+}
+
+.datos-contacto{
+    display:inline-flex;
+    gap:20%;
+    padding-top: 4%;
+}
+
+.datos-contacto img{
+    width: 200px;
+}
+
+.datos-contacto h1{
+    font-size: 40px;
+    text-decoration: none;
+    color: #000000;
+    font-weight:bold;
+}
+
+.datos-contacto h2{
+    font-size: 30px;
+    text-decoration: none;
+    color: #000000;
+    font-weight:bold;
+}
+
+.formContacto{
+    display:inline-block;
+    padding-top: 5%;
+}
+
+.formContacto input{
+    background-color: #dde5b683;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.formContacto .mensaje{
+width: 800px;
+}
+
+.formContacto button{
+    background-color: #6B774B;
+    color: white;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+footer{
+    padding-top: 5%;
+}
+
+footer h4{
+    font-size: 30px;
+    text-decoration: none;
+    color: #000000;
+    font-weight:bold;
+
+}
+
+.img_redes{
+    width: 40px; 
+    height: auto;
+
+}
