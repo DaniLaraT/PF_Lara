@@ -5,6 +5,8 @@
     font-family: lato;
 }
 
+/*-------------------------------------------------HEADER----------------------------------------------------------*/
+
 header{
     background-color: #ADC178;
     display: flex;
@@ -42,6 +44,55 @@ header nav ul a.here{
     font-size: 30px;
 
 }
+
+.barra_inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del ícono hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333; /* Fondo del menú desplegable */
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block; /* Muestra el ícono hamburguesa en móviles */
+    }
+
+    /* Cuando el checkbox está activado, muestra el menú */
+    .menu-toggle:checked + .menu-icon + nav .nav-menu {
+        display: flex;
+    }
+}
+
+
+/*--------------------------------------------------------------INICIO-----------------------------------------------------------*/
 
 body.inicio section{
     display: flex;
@@ -92,21 +143,40 @@ body.inicio article h2{
 
 }
 
+/*--------------------------------------------------------------TIPS-----------------------------------------------------------*/
 
-
-.tips img {
-    width: 400px; 
+.tips {
+    display: flex;
+    margin: 20px;
+    gap: 20PX;
+    justify-content: center;
 }
 
+.tips article{   
+     width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.tips img{
+    width: 100%;
+    height: auto;
+}
 .tips p{
-        font-size: 28px;
+        font-size: 20px;
         text-decoration: none;
         color: rgb(0, 0, 0);
-        font-weight:normal;
+        font-weight:300;
 }
+
 
 .tips .one {
     background-color: #DDE5B6;
+
 }
 
 .tips .two {
@@ -117,41 +187,66 @@ body.inicio article h2{
     background-color: #DDE5B6;
 }
 
-.tips .thre img {
-    width: 400px;
-    height: 300px;
+/*--------------------------------------------------------------CURSOS-----------------------------------------------------------*/
+
+.cursos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cursos article{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 1% 5%;
 }
 
 .cursos h1{
-    font-size: 60px;
+    font-size: 25px;
     text-decoration: none;
     color: #6B774B;
     font-weight: bold;
 }
 
-.cursos img{
-    width: 400px;
-}
-
 .cursos h2{
-    font-size: 40px;
+    font-size: 30px;
     text-decoration: none;
     color: #000000;
     font-weight: bold;
 }
 
 .cursos h3{
-    font-size: 40px;
+    font-size: 30px;
     text-decoration: none;
     color: #6C584C;
     font-weight: bold;
 }
 
 .cursos p{
-    font-size: 28px;
+    font-size: 20px;
     text-decoration: none;
     color: #000000;
     font-weight:normal;
+    margin: 0px;
+}
+.cursos .cursos-img{
+    width: 40%;
+    height: auto;
+}
+
+.cursos .cursos-text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.cursos img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cursos .curso1{
@@ -170,73 +265,158 @@ body.inicio article h2{
     background-color: #dde5b686;
 }
 
+/*--------------------------------------------------------------NOSOTROS-----------------------------------------------------------*/
+
+.nosotros{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(3,1fr);
+    height: 100vh;
+}
+
 .nosotros h1{
-    font-size: 40px;
+    font-size: 30px;
     text-decoration: none;
     color: #000000;
     font-weight:bold;
 }
 
 .nosotros h3{
-    font-size: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+    font-weight:300;
+}
+
+.img_nosotros{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+.QuienesSomos{
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+}
+.mision{
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+}
+.Vision{
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 3;
+
+}
+
+.img_nosotros img{
+    width: 100%;
+}
+
+/*--------------------------------------------------------------CONTACTO-----------------------------------------------------------*/
+.contacto {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    margin: 5px 5%;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+        "wsp email horario"
+        "section-form-contacto section-form-contacto section-form-contacto";
+}
+
+.contacto section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contacto section img{
+    width: 100px;
+}
+
+.contacto section h1{
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+    font-weight:bold;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.contacto section h2{
+    font-size: 20px;
     text-decoration: none;
     color: #000000;
     font-weight:normal;
+    margin: 0;
 }
 
-.nosotros img{
-    width: 900px;
-}
 
-.datos-contacto{
-    display:inline-flex;
-    gap:20%;
-    padding-top: 4%;
+.section-form-contacto {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    flex-direction: column;
+    align-items: center;
 }
-
-.datos-contacto img{
-    width: 200px;
-}
-
-.datos-contacto h1{
-    font-size: 40px;
-    text-decoration: none;
-    color: #000000;
-    font-weight:bold;
-}
-
-.datos-contacto h2{
-    font-size: 30px;
-    text-decoration: none;
-    color: #000000;
-    font-weight:bold;
-}
-
 .formContacto{
-    display:inline-block;
-    padding-top: 5%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+
+.formContacto .input-1{
+    width: 40%;
+}
+
+.formContacto .input-2{
+    width: 60%;
 }
 
 .formContacto input{
+    margin: 5px;
+    border: none;
     background-color: #dde5b683;
     font-size: 30px;
     border-radius: 10px;
     padding: 10px;
 }
 
+
 .formContacto .mensaje{
-width: 800px;
+width: 100%;
+height: 80%;
 }
 
-.formContacto button{
+.section-form-contacto button{
     background-color: #6B774B;
+    border: none;
+    width: 20%;
     color: white;
     font-size: 30px;
     border-radius: 10px;
     padding: 10px;
     padding-left: 3%;
     padding-right: 3%;
+    margin: 5px;
 }
+
+/*--------------------------------------------------------------FOOTER-----------------------------------------------------------*/
 
 footer{
     display: flex;
