@@ -33,15 +33,22 @@ ul{
     list-style: none;
 }
  
-header nav ul a{ 
+header nav ul a:not(.here){ 
     font-size: 20px;
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
+header nav ul a:hover{
+    font-size: 30px;
+}
+
 header nav ul a.here{ 
     font-size: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 
 }
 
@@ -58,7 +65,6 @@ header nav ul a.here{
     padding: 0;
 }
 
-/* Estilos del ícono hamburguesa */
 .menu-toggle {
     display: none;
 }
@@ -69,17 +75,26 @@ header nav ul a.here{
     cursor: pointer;
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
+/*RESPONSIVE BARRA MENÚ*/
+
+/*TABLET*/
+
+@media (max-width: 770px) {
     .nav-menu {
         display: none; /* Oculta el menú por defecto en pantallas pequeñas */
         flex-direction: column;
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: #333; /* Fondo del menú desplegable */
+        background-color: #6C584C; /* Fondo del menú desplegable */
         width: 100%;
+        z-index: 2;
     }
+
+    .menu-icon img{
+        width: 50px;
+    }
+    
 
     .menu-icon {
         display: block; /* Muestra el ícono hamburguesa en móviles */
@@ -90,6 +105,13 @@ header nav ul a.here{
         display: flex;
     }
 }
+
+@media (max-width: 320px) {
+    .menu-icon img{
+        width: 40px;
+    }
+}
+
 
 
 /*--------------------------------------------------------------INICIO-----------------------------------------------------------*/
@@ -143,6 +165,41 @@ body.inicio article h2{
 
 }
 
+/*--------Responsive----------
+/*Tablets*/
+@media (max-width: 770px) {
+    
+    .img_inicio {
+        width: 100%;
+        height: auto;
+        opacity: 0.7;
+        position: relative;
+    }
+ section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ }
+
+ body.inicio section article{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+ }
+
+ body.inicio article div.container{
+    transform: none;}
+
+ body.inicio article h2{
+    font-size: 15px;
+}
+}
+
 /*--------------------------------------------------------------TIPS-----------------------------------------------------------*/
 
 .tips {
@@ -159,7 +216,13 @@ body.inicio article h2{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    text-align: center;
 }
+
+.tips article:hover{   
+    width: 35%;
+}
+
 
 
 .tips img{
@@ -174,19 +237,59 @@ body.inicio article h2{
 }
 
 
-.tips .one {
+.tips article:nth-child(even){
     background-color: #DDE5B6;
-
 }
 
-.tips .two {
+.tips article:nth-child(odd) {
     background-color: #F0EAD2;
 }
 
-.tips .thre {
-    background-color: #DDE5B6;
+/*--------Responsive----------
+/*Tablets*/
+@media (max-width: 770px) {
+    .tips {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .tips article {
+        width: 80%; 
+    }
+
+    section{
+        align-items: center;
+    }
+
+    .tips p {
+        font-size: 20px;
+    }
+
+    .tips img {
+        max-width: 70%; 
+    }
 }
 
+/*Movile*/
+@media (max-width: 320px) {
+    .tips {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+
+    .tips article {
+        width: 90%; 
+    }
+
+    .tips p {
+        font-size: 16px;
+    }
+
+    .tips img {
+        max-width: 100%; 
+    }
+}
 /*--------------------------------------------------------------CURSOS-----------------------------------------------------------*/
 
 .cursos{
@@ -249,21 +352,71 @@ body.inicio article h2{
     object-fit: cover;
 }
 
-.cursos .curso1{
+.cursos article:nth-child(even){
     background-color: #a9846789;
 }
 
-.cursos .curso2{
+.cursos article:nth-child(odd){
     background-color: #dde5b686;
 }
 
-.cursos .curso3{
-    background-color: #f0ead289;
+/*--------Responsive----------
+/*Tablets*/
+@media (max-width: 770px) {
+
+    .cursos h1,
+    .cursos h2,
+    .cursos h3 {
+        font-size: 22px;
+    }
+
+    .cursos p {
+        font-size: 18px;
+    }
+
+    .cursos .cursos-img {
+        width: 100%;
+    }
+
+    .cursos .cursos-text {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-.cursos .curso4{
-    background-color: #dde5b686;
+/*Movile*/
+@media (max-width: 320px) {
+    .cursos {
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+
+    .cursos article {
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .cursos h1,
+    .cursos h2,
+    .cursos h3 {
+        font-size: 18px;
+    }
+
+    .cursos p {
+        font-size: 16px;
+    }
+
+    .cursos .cursos-img {
+        width: 100%; 
+    }
+
+    .cursos .cursos-text {
+        width: 100%;
+        text-align: center;
+    }
 }
+
+
 
 /*--------------------------------------------------------------NOSOTROS-----------------------------------------------------------*/
 
@@ -271,7 +424,16 @@ body.inicio article h2{
     display: grid;
     grid-template-columns: repeat(7,1fr);
     grid-template-rows: repeat(3,1fr);
-    height: 100vh;
+    margin-top: 20px;
+    height: calc(100vh + 30px);
+}
+
+.nosotros section:not(.img_nosotros):hover{
+    transform: scale(1.05)
+}
+
+.nosotros section:not(.img_nosotros){
+    text-align: center;
 }
 
 .nosotros h1{
@@ -319,7 +481,7 @@ body.inicio article h2{
 }
 
 .img_nosotros img{
-    width: 100%;
+    width: 90%;
 }
 
 /*--------------------------------------------------------------CONTACTO-----------------------------------------------------------*/
@@ -419,9 +581,12 @@ height: 80%;
 /*--------------------------------------------------------------FOOTER-----------------------------------------------------------*/
 
 footer{
+    width: 95%;
+    padding: 5px 20px;
     display: flex;
     justify-content: space-between;
-    margin: 0px 20px;
+    margin: 3px 20px;
+    background-color: #f0ead287;
 }
 
 footer h4{
@@ -435,6 +600,7 @@ footer h4{
 footer .redes-sociales{
     display: flex;
     flex-direction: column;
+    width: 20%;
 }
 
 footer .redes-sociales div{
