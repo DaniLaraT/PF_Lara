@@ -80,24 +80,24 @@ header nav ul a.here{
 /*TABLET*/
 
 @media (max-width: 770px) {
+
     .nav-menu {
-        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: #6C584C; /* Fondo del menú desplegable */
+        background-color: #6C584C;
         width: 100%;
         z-index: 2;
     }
-
     .menu-icon img{
         width: 50px;
     }
-    
 
     .menu-icon {
-        display: block; /* Muestra el ícono hamburguesa en móviles */
+        display: block; 
+        margin-right: -50%;
     }
 
     /* Cuando el checkbox está activado, muestra el menú */
@@ -106,9 +106,13 @@ header nav ul a.here{
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 450px) {
     .menu-icon img{
         width: 40px;
+    }
+
+    .menu-icon{
+        margin-right: -20%;
     }
 }
 
@@ -126,7 +130,6 @@ body.inicio section article{
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin: 10px;
     justify-content: center;
 }
 
@@ -175,29 +178,43 @@ body.inicio article h2{
         opacity: 0.7;
         position: relative;
     }
- section{
-    position: relative;
-    display: flex;
+ .inicio section{
     align-items: center;
     justify-content: center;
-    
+    position: relative;
  }
 
  body.inicio section article{
     position: absolute;
     width: 100%;
+    height: 50%;
+    margin-top: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
+    top: -20%;
  }
 
  body.inicio article div.container{
-    transform: none;}
+    transform: none;
+    position: absolute;
+}
 
  body.inicio article h2{
     font-size: 15px;
 }
+}
+
+/*Movile*/
+@media (max-width: 380px) {
+
+    body.inicio section{
+        top: 40px;
+        margin-bottom: 100px;
+     }
+
+
 }
 
 /*--------------------------------------------------------------TIPS-----------------------------------------------------------*/
@@ -484,6 +501,73 @@ body.inicio article h2{
     width: 90%;
 }
 
+/* Tablets */
+@media (max-width: 770px) {
+    .nosotros {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        height: auto;
+    }
+
+    .img_nosotros {
+        flex: 0 0 30%; /* Ocupa el 30% del ancho de la fila */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .img_nosotros img {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    }
+
+    .QuienesSomos {
+        flex: 0 0 60%; /* Ocupa el 60% del ancho de la fila */
+        padding: 10px;
+        text-align: left;
+    }
+
+    .nosotros h1 {
+        font-size: 24px;
+    }
+
+    .nosotros h3 {
+        font-size: 18px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+    .nosotros {
+        display: block;
+        margin-top: 10px;
+        height: auto;
+    }
+
+    .nosotros section {
+        margin-bottom: 15px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .nosotros h1 {
+        font-size: 20px;
+    }
+
+    .nosotros h3 {
+        font-size: 16px;
+    }
+
+    .img_nosotros img {
+        width: 100%;
+    }
+}
+
+
 /*--------------------------------------------------------------CONTACTO-----------------------------------------------------------*/
 .contacto {
     width: 100%;
@@ -578,6 +662,90 @@ height: 80%;
     margin: 5px;
 }
 
+/* Tablets */
+@media (max-width: 770px) {
+    .contacto {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "wsp email"
+            "horario horario"
+            "section-form-contacto section-form-contacto";
+    }
+
+    .section-form-contacto {
+        grid-column: span 2;
+        display: block; /* Cambia el formulario a bloque */
+    }
+
+    .formContacto {
+        flex-direction: column; /* Acomoda inputs en una columna */
+    }
+
+    .formContacto .input-1,
+    .formContacto .input-2 {
+        width: 100%;
+    }
+
+    .formContacto input {
+        font-size: 18px; /* Ajusta el tamaño de fuente de los inputs */
+    }
+
+    .section-form-contacto button {
+        width: 100%; /* Botón ocupa el ancho completo */
+        font-size: 24px;
+    }
+
+    /* Disminuye el tamaño del texto */
+    .contacto section h1 {
+        font-size: 18px;
+    }
+
+    .contacto section h2 {
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .contacto {
+        display: block; /* Cambia todo a bloque */
+    }
+
+    .contacto section,
+    .section-form-contacto {
+        margin: 10px 0;
+    }
+
+    .formContacto {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .formContacto .input-1,
+    .formContacto .input-2 {
+        width: 100%;
+    }
+
+    .formContacto input {
+        font-size: 16px; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .section-form-contacto button {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    /* Disminuye aún más el tamaño del texto */
+    .contacto section h1 {
+        font-size: 16px;
+    }
+
+    .contacto section h2 {
+        font-size: 14px;
+    }
+}
+
 /*--------------------------------------------------------------FOOTER-----------------------------------------------------------*/
 
 footer{
@@ -610,5 +778,17 @@ footer .redes-sociales div{
 .img_redes{
     width: 40px; 
     height: auto;
+
+}
+
+/*Movile*/
+@media (max-width: 380px) {
+
+    footer{
+        width: 90%;
+margin: 5px 0 0 0 ;
+display: flex;
+justify-content:center;
+    }
 
 }
