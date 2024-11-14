@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  font-family: lato;
+}
+
+// Variables
+$color-fondo: #dde5b683;
+$color-boton: #6B774B;
+$color-texto: #000000;
+$color-header: #ADC178;
+$color-nav-background: #6C584C;
+$color-tips-even: #DDE5B6;
+$color-tips-odd: #F0EAD2;
+$color-cursos-even: #a9846789;
+$color-cursos-odd: #dde5b686;
+$color-contact-background: rgba(240, 234, 210, 0.5);
+$color-footer-background: #f0ead287;
+$font-size-large: 30px;
+$font-size-medium: 20px;
+$font-size-small: 16px;
+
+// -------------------------------------------------HEADER----------------------------------------------------------
+
+header {
+    background-color: $color-header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+  
+    img {
+      width: 200px;
+      height: auto;
+    }
+  
+    nav {
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+  
+        a {
+          font-size: $font-size-medium;
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+  
+          &:not(.here) {
+            font-size: $font-size-medium;
+          }
+  
+          &.here,
+          &:hover {
+            font-size: $font-size-large;
+          }
+        }
+      }
+    }
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .barra_inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  
+    img {
+      width: 50px;
+    }
+  }
+  
+  // Responsive Barra Menú
+  @media (max-width: 770px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: $color-nav-background;
+      width: 100%;
+      z-index: 2;
+    }
+  
+    .menu-icon {
+      display: block;
+      margin-right: -50%;
+    }
+  
+    .menu-toggle:checked + .menu-icon + nav .nav-menu {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .menu-icon {
+      img {
+        width: 40px;
+      }
+      margin-right: -20%;
+    }
+  }
+// --------------------------------------------------------------INICIO-----------------------------------------------------------
+
+body.inicio {
+    section {
+      display: flex;
+      margin: 0px 10px;
+  
+      article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        justify-content: center;
+  
+        h2 {
+          font-size: $font-size-medium + 5px;
+          text-decoration: none;
+          color: $color-boton;
+          font-weight: bold;
+        }
+  
+        div.container {
+          display: flex;
+          width: 90%;
+          background-color: $color-contact-background;
+          transform: translateX(20%);
+          z-index: 1;
+          padding: 30px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+  
+  .img_inicio {
+    width: 70%;
+    height: auto;
+    opacity: 0.7;
+  
+    img {
+      width: 100%;
+    }
+  }
+  
+  .bienvenida img {
+    opacity: 1;
+    width: 250px;
+  }
+  
+  @media (max-width: 770px) {
+    .img_inicio {
+      width: 100%;
+      height: auto;
+      opacity: 0.7;
+      position: relative;
+    }
+  
+    body.inicio {
+      section {
+        align-items: center;
+        justify-content: center;
+        position: relative;
+  
+        article {
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          margin-top: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1;
+          top: -20%;
+  
+          div.container {
+            transform: none;
+            position: absolute;
+          }
+  
+          h2 {
+            font-size: $font-size-small - 1px;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 380px) {
+    body.inicio {
+      section {
+        top: 40px;
+        margin-bottom: 100px;
+      }
+    }
+  }
+// --------------------------------------------------------------TIPS-----------------------------------------------------------
+
+.tips {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+    justify-content: center;
+  
+    article {
+      width: 30%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+  
+      &:hover {
+        width: 35%;
+      }
+  
+      &:nth-child(even) {
+        background-color: $color-tips-even;
+      }
+  
+      &:nth-child(odd) {
+        background-color: $color-tips-odd;
+      }
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+  
+      p {
+        font-size: $font-size-medium;
+        text-decoration: none;
+        color: $color-texto;
+        font-weight: 300;
+      }
+    }
+  }
+  
+  @media (max-width: 770px) {
+    .tips {
+      flex-direction: column;
+      align-items: center;
+  
+      article {
+        width: 80%;
+      }
+  
+      p {
+        font-size: $font-size-medium;
+      }
+  
+      img {
+        max-width: 70%;
+      }
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .tips {
+      flex-direction: column;
+      align-items: center;
+  
+      article {
+        width: 90%;
+      }
+  
+      p {
+        font-size: $font-size-small;
+      }
+  
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+// --------------------------------------------------------------CURSOS-----------------------------------------------------------
+
+.cursos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    article {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin: 1% 5%;
+  
+      &:nth-child(even) {
+        background-color: $color-cursos-even;
+      }
+  
+      &:nth-child(odd) {
+        background-color: $color-cursos-odd;
+      }
+    }
+  
+    h1,
+    h2,
+    h3 {
+      font-size: $font-size-large;
+      text-decoration: none;
+      color: $color-nav-background;
+      font-weight: bold;
+    }
+  
+    p {
+      font-size: $font-size-medium;
+      text-decoration: none;
+      color: $color-texto;
+      font-weight: normal;
+      margin: 0px;
+    }
+  
+    .cursos-img {
+      width: 40%;
+      height: auto;
+    }
+  
+    .cursos-text {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  @media (max-width: 770px) {
+    .cursos {
+      h1,
+      h2,
+      h3 {
+        font-size: 22px;
+      }
+  
+      p {
+        font-size: 18px;
+      }
+  
+      .cursos-img,
+      .cursos-text {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .cursos {
+      flex-direction: row;
+      flex-wrap: wrap;
+  
+      article {
+        flex-direction: column;
+        width: 100%;
+      }
+  
+      h1,
+      h2,
+      h3 {
+        font-size: 18px;
+      }
+  
+      p {
+        font-size: $font-size-small;
+      }
+  
+      .cursos-img,
+      .cursos-text {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+// --------------------------------------------------------------NOSOTROS-----------------------------------------------------------
+
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 20px;
+    height: calc(100vh + 30px);
+  
+    section:not(.img_nosotros) {
+      &:hover {
+        transform: scale(1.05);
+      }
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: $font-size-large;
+      text-decoration: none;
+      color: $color-texto;
+      font-weight: bold;
+    }
+  
+    h3 {
+      font-size: $font-size-medium;
+      text-decoration: none;
+      color: $color-texto;
+      font-weight: 300;
+    }
+  
+    .img_nosotros {
+      grid-column: 1 / 5;
+      grid-row: 1 / 3;
+  
+      img {
+        width: 90%;
+      }
+    }
+  
+    .QuienesSomos {
+      grid-column: 4 / 8;
+      grid-row: 1 / 2;
+    }
+  
+    .mision {
+      grid-column: 5 / 8;
+      grid-row: 2 / 2;
+    }
+  
+    .Vision {
+      grid-column: 5 / 8;
+      grid-row: 3 / 3;
+    }
+  }
+  
+  @media (max-width: 770px) {
+    .nosotros {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  
+      h1 {
+        font-size: 22px;
+      }
+  
+      h3 {
+        font-size: 18px;
+      }
+  
+      .img_nosotros,
+      .QuienesSomos,
+      .mision,
+      .Vision {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .nosotros {
+      flex-direction: row;
+      flex-wrap: wrap;
+  
+      h1 {
+        font-size: 18px;
+      }
+  
+      h3 {
+        font-size: $font-size-small;
+      }
+  
+      .img_nosotros,
+      .QuienesSomos,
+      .mision,
+      .Vision {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+// --------------------------------------------------------------CONTACTO-----------------------------------------------------------
+
+.contacto {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  margin: 5px 5%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "wsp email horario"
+    "section-form-contacto section-form-contacto section-form-contacto";
+
+  section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: 100px;
+    }
+
+    h1 {
+      font-size: $font-size-medium;
+      color: $color-texto;
+      font-weight: bold;
+      margin: 0;
+      margin-top: 5px;
+    }
+
+    h2 {
+      font-size: $font-size-medium;
+      color: $color-texto;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+  .section-form-contacto {
+    display: flex;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    flex-direction: column;
+    align-items: center;
+
+    .formContacto {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      .input-1 {
+        width: 40%;
+      }
+
+      .input-2 {
+        width: 60%;
+      }
+
+      input {
+        margin: 5px;
+        border: none;
+        background-color: $color-fondo;
+        font-size: $font-size-large;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .mensaje {
+        width: 100%;
+        height: 80%;
+      }
+    }
+
+    button {
+      background-color: $color-boton;
+      border: none;
+      width: 20%;
+      color: white;
+      font-size: $font-size-large;
+      border-radius: 10px;
+      padding: 10px;
+      padding-left: 3%;
+      padding-right: 3%;
+      margin: 5px;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 770px) {
+  .contacto {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "wsp email"
+      "horario "
+      "section-form-contacto section-form-contacto";
+
+    .section-form-contacto {
+      grid-column: span 2;
+      display: block;
+
+      .formContacto {
+        flex-direction: column;
+
+        .input-1,
+        .input-2 {
+          width: 100%;
+        }
+
+        input {
+          font-size: 18px;
+        }
+      }
+
+      button {
+        width: 100%;
+        font-size: 24px;
+      }
+    }
+
+    section {
+      h1 {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto {
+    display: block;
+
+    section,
+    .section-form-contacto {
+      margin: 10px 0;
+    }
+
+    .section-form-contacto {
+      .formContacto {
+        flex-direction: column;
+        width: 100%;
+
+        .input-1,
+        .input-2 {
+          width: 100%;
+        }
+
+        input {
+          font-size: $font-size-small;
+        }
+      }
+
+      button {
+        width: 100%;
+        font-size: 20px;
+      }
+    }
+
+    section {
+      h1 {
+        font-size: $font-size-small;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+    }
+  }
+}
+// --------------------------------------------------------------FOOTER-----------------------------------------------------------
+footer {
+    width: 95%;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 20px;
+    background-color: $color-footer-background;
+  
+    h4 {
+      font-size: 10px;
+      color: $color-texto;
+      font-weight: bold;
+    }
+  
+    .redes-sociales {
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+  
+      div {
+        display: flex;
+      }
+  
+      .img_redes {
+        width: 40px;
+        height: auto;
+      }
+    }
+  }
+  
+  @media (max-width: 380px) {
+    footer {
+      width: 90%;
+      margin: 5px 0 0 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
