@@ -1,24 +1,11 @@
+@import "./variables";
+@import "./map";
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
   font-family: lato;
 }
-
-// Variables
-$color-fondo: #dde5b683;
-$color-boton: #6B774B;
-$color-texto: #000000;
-$color-header: #ADC178;
-$color-nav-background: #6C584C;
-$color-tips-even: #DDE5B6;
-$color-tips-odd: #F0EAD2;
-$color-cursos-even: #a9846789;
-$color-cursos-odd: #dde5b686;
-$color-contact-background: rgba(240, 234, 210, 0.5);
-$color-footer-background: #f0ead287;
-$font-size-large: 30px;
-$font-size-medium: 20px;
-$font-size-small: 16px;
 
 // -------------------------------------------------HEADER----------------------------------------------------------
 
@@ -44,7 +31,7 @@ header {
         align-items: center;
   
         a {
-          font-size: $font-size-medium;
+          font-size: map-get($fonts, size-medium);
           text-decoration: none;
           color: white;
           font-weight: bold;
@@ -55,7 +42,7 @@ header {
   
           &.here,
           &:hover {
-            font-size: $font-size-large;
+            font-size: map-get($fonts, size-large)
           }
         }
       }
@@ -139,7 +126,7 @@ body.inicio {
         justify-content: center;
   
         h2 {
-          font-size: $font-size-medium + 5px;
+        font-size: map-get($fonts, size-medium) + 5px;
           text-decoration: none;
           color: $color-boton;
           font-weight: bold;
@@ -205,7 +192,7 @@ body.inicio {
           }
   
           h2 {
-            font-size: $font-size-small - 1px;
+            font-size: map-get($fonts, size-small) - 1px;
           }
         }
       }
@@ -255,7 +242,7 @@ body.inicio {
       }
   
       p {
-        font-size: $font-size-medium;
+        font-size: map-get($fonts, size-medium);
         text-decoration: none;
         color: $color-texto;
         font-weight: 300;
@@ -273,7 +260,7 @@ body.inicio {
       }
   
       p {
-        font-size: $font-size-medium;
+        font-size: map-get($fonts, size-medium);
       }
   
       img {
@@ -292,7 +279,7 @@ body.inicio {
       }
   
       p {
-        font-size: $font-size-small;
+        font-size: map-get($fonts, size-small);
       }
   
       img {
@@ -326,7 +313,7 @@ body.inicio {
     h1,
     h2,
     h3 {
-      font-size: $font-size-large;
+        font-size: map-get($fonts, size-large);
       text-decoration: none;
       color: $color-nav-background;
       font-weight: bold;
@@ -396,7 +383,7 @@ body.inicio {
       }
   
       p {
-        font-size: $font-size-small;
+        font-size: map-get($fonts, size-small);
       }
   
       .cursos-img,
@@ -423,14 +410,14 @@ body.inicio {
     }
   
     h1 {
-      font-size: $font-size-large;
+        font-size: map-get($fonts, size-large);
       text-decoration: none;
       color: $color-texto;
       font-weight: bold;
     }
   
     h3 {
-      font-size: $font-size-medium;
+        font-size: map-get($fonts, size-medium);
       text-decoration: none;
       color: $color-texto;
       font-weight: 300;
@@ -495,7 +482,7 @@ body.inicio {
       }
   
       h3 {
-        font-size: $font-size-small;
+        font-size: map-get($fonts, size-small);
       }
   
       .img_nosotros,
@@ -532,7 +519,7 @@ body.inicio {
     }
 
     h1 {
-      font-size: $font-size-medium;
+        font-size: map-get($fonts, size-medium);
       color: $color-texto;
       font-weight: bold;
       margin: 0;
@@ -540,7 +527,7 @@ body.inicio {
     }
 
     h2 {
-      font-size: $font-size-medium;
+        font-size: map-get($fonts, size-medium);
       color: $color-texto;
       font-weight: normal;
       margin: 0;
@@ -661,7 +648,7 @@ body.inicio {
         }
 
         input {
-          font-size: $font-size-small;
+            font-size: map-get($fonts, size-small);
         }
       }
 
@@ -673,7 +660,7 @@ body.inicio {
 
     section {
       h1 {
-        font-size: $font-size-small;
+        font-size: map-get($fonts, size-small);
       }
 
       h2 {
