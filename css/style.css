@@ -4,10 +4,10 @@
 }
 
 header {
-  background-color: #ADC178;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #ADC178;
   padding: 0px 20px;
 }
 header img {
