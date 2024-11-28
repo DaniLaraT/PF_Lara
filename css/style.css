@@ -145,6 +145,7 @@ body.inicio section article div.container {
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-top: 15%;
   }
   body.inicio section article {
     position: absolute;
@@ -464,7 +465,7 @@ body.inicio section article div.container {
   padding: 10px;
 }
 .contacto .section-form-contacto .formContacto .mensaje {
-  width: 100%;
+  width: 80%;
   height: 80%;
 }
 .contacto .section-form-contacto button {
@@ -513,6 +514,7 @@ body.inicio section article div.container {
 @media (max-width: 480px) {
   .contacto {
     display: block;
+    width: 90%;
   }
   .contacto section,
   .contacto .section-form-contacto {
@@ -530,7 +532,6 @@ body.inicio section article div.container {
     font-size: 16px;
   }
   .contacto .section-form-contacto button {
-    width: 100%;
     font-size: 20px;
   }
   .contacto section h1 {
@@ -541,11 +542,10 @@ body.inicio section article div.container {
   }
 }
 footer {
-  width: 95%;
   padding: 5px 20px;
   display: flex;
+  margin-top: 30px;
   justify-content: space-between;
-  margin: 3px 20px;
   background-color: rgba(240, 234, 210, 0.5294117647);
 }
 footer h4 {
@@ -556,7 +556,7 @@ footer h4 {
 footer .redes-sociales {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 30%;
 }
 footer .redes-sociales div {
   display: flex;
@@ -571,7 +571,6 @@ footer .redes-sociales .img_redes {
     width: 90%;
     margin: 5px 0 0 0;
     display: flex;
-    justify-content: center;
   }
 }
 
